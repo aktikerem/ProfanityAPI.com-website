@@ -1,0 +1,72 @@
+<header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5" style="font-size: 60px;">Fast, Reliable way to stop profanity</h1>
+                    <!-- Signup form-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Email address input-->
+                        <div class="container bg-light p-2 rounded-3">
+                            <div class="container my-2 mx-auto" >
+                                <div class="row mx-auto">
+                                    <!-- Small div -->
+                                    <div class="col-sm-2">
+                                        <div class="p-1 mb-2 bg-secondary rounded-3 text-gray">GET</div>
+                                        <div class="col-md-1"></div>
+
+                                    </div>
+
+                                    <!-- Long div -->
+                                    <div class="col-md-10">
+                                        <div class="p-1 mb-2 text-dark" style="font-size: larger; overflow: hidden; text-overflow: clip;">https://api.profanityapi.com/v1/text="inputtexthere"</div>
+                                    </div>
+                                </div>
+                            
+                        
+
+                        </div>
+                        <form class="col" #userGet="ngForm" (ngSubmit)="onSubmit(userGet.value)">
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control form-control-lg" ngModel name="yo" id="emailAddress" type="text" placeholder="Write something offensive..." data-sb-validations="required,email" />
+
+                            </div>
+                            <div class="col-auto"><button class="btn btn-primary btn-lg " id="submitButton" type="submit">Go</button></div>
+                        </div>
+                    </form>
+                        <div class="container mb-2 my-3 p-5  rounded-3" style="border: 2px dashed #00000070;" >
+                            <p *ngIf="!result" class="text-dark">you will see the results here  </p>
+                            <p *ngIf="result" class="text-dark">{{result}}</p>
+                        </div>
+                    </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                <p>To activate this form, sign up at</p>
+                                <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
